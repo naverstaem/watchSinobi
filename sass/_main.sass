@@ -339,7 +339,7 @@ header
 
 .reviews
   +clr
-  padding-bottom: 60px
+  padding-bottom: 80px
   padding-top: 45px
   h2
     margin-bottom: 35px
@@ -352,40 +352,34 @@ header
     width: 300px
     position: relative
     display: inline-block
-    margin-right: 42px
-    vertical-align: top
-    text-align: center
+    margin-right: 30px
+    +border-radius(8px)
+    +background-clip(padding-box)
+    padding: 18px
     +box
     +clr
+    background: #f5ebd1
+    @include box-shadow(inset 0 -2px 0 rgba(0,0,0,.1))
     &:last-child
       margin-right: 0
-    .review__img
-      display: inline-block
-      width: 120px
-      height: 120px
-      +border-radius(50%)
-      border: solid 2px #e5e5e5
-      margin-bottom: 15px
-      img
-        vertical-align: middle
-        display: inline-block
-      .vertical-centered
-        vertical-align: middle
-        display: inline-block
-        height: 100%
+    &:after
+      position: absolute
+      content: ""
+      bottom: -40px
+      left: 20px
+      +s(review_popup)
 
     h3
-      color: #1e1e1e
-      font-size: 24px
+      color: #3c3c3c
+      font-size: 18px
       font-family: 'conv_pfdintextcondpro-light'
       text-transform: uppercase
       margin-bottom: 10px
       font-weight: normal
     p
       +pfl
-      color: #1e1e1e
+      color: #3c3c3c
       font-size: 16px
-      padding: 0 10px
 
 .order
   margin-top: 0
@@ -473,21 +467,23 @@ header
   position: relative
   +clr
   +box
-  h3
-    font-weight: normal
-    color: #ffffff
-    font-size: 36px
-    font-family: 'conv_pfdintextcondpro-thin'
-    text-align: center
-    line-height: 1em
-    text-transform: uppercase
   h2
-    color: white
-    font-family: 'code_pro_lightregular'
-    font-size: 60px
-    text-align: center
+    font-size: 72px
+    color: #5f6450
+    font-family: 'philosopheritalic'
+    line-height: .9em
+    text-transform: none
     font-weight: normal
-    line-height: 1.2em
+    text-align: center
+  h3
+    font-family: 'conv_pfdintextcondpro-xthinital'
+    font-size: 36px
+    text-align: center
+    text-transform: uppercase
+    font-weight: normal
+    line-height: 1em
+    color: #5f6450
+
 
   .our_in
     @extend %in
@@ -499,7 +495,7 @@ header
     background: url(../img/russia.png) center center no-repeat
     width: 860px
     height: 515px
-    margin: -100px auto 0
+    margin: -90px auto 0
   &__delivery
     width: 170px
     color: #ffffff
@@ -521,12 +517,12 @@ header
     width: 600px
     margin: 55px auto 0
     position: relative
-    margin-left: 345px
+    margin-left: 465px
   &__price
     width: 180px
     display: inline-block
     position: relative
-    margin-right: 170px
+    margin-right: 105px
     margin-left: 50px
     color: #ffffff
     font-size: 18px
@@ -552,8 +548,8 @@ header
       +s(bubble_ico)
   &__girl
     position: absolute
-    bottom: -107px
-    left: -210px
+    bottom: -105px
+    left: 0px
     img
       display: block
 
