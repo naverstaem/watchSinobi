@@ -167,7 +167,10 @@ header
     height: 0
 
 .specs
-  padding-top: 45px
+  background: url(../img/specs_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 545px
+  padding-top: 52px
   +clr
   +box
   h2
@@ -181,29 +184,34 @@ header
     +clr
 
   &__items-wrapper
-    float: right
-    width: 520px
-    margin-top: -25px
+    float: left
+    width: 580px
     +clr
   &__items
     float: left
-    width: 270px
     font-size: 16px
     padding-bottom: 40px
     +box
     +clr
     &.short
-      width: 220px
+      width: 160px
       .specs__item
         &.title
           margin-bottom: 28px
   &__presents
-    background: #efefef
-    +border-radius(2px)
-    padding: 20px 30px
-    color: #5a5a5a
+    color: #ffffff
     +clr
     clear: both
+    +pfl
+    line-height: 1.7em
+  hr
+    border: none
+    height: 2px
+    background-color: #fff
+    @include background-image(linear-gradient(to left, #6d4f31 0%, #7d634f 100%))
+    margin-top: 15px
+    margin-bottom: 15px
+
 
   &__price
     margin-top: 18px
@@ -227,7 +235,7 @@ header
       font-family: 'conv_segoeprintregular'
 
   &__item
-    color: #787878
+    color: #e1c8aa
     margin-top: 16px
     font-family: 'conv_pfdintextcondpro-light'
     font-size: 18px
@@ -239,27 +247,34 @@ header
       font-size: 18px
 
     span
-      color: #000
+      color: #ffffff
       font-size: 18px
       text-transform: uppercase
     .item-colors
       display: inline-block
       vertical-align: top
-      .golden
+      margin-top: -5px
+      height: 30px
+      .black
         display: inline-block
-        width: 20px
-        height: 20px
-        +border-radius(2px)
-        background: #ebd7a5
+        width: 30px
+        height: 30px
+        @include border-radius(50%)
+        @include background-clip(padding-box)
+        @include background-image(linear-gradient(to bottom, #3b3b3b 0%, #000 100%))
         margin-left: 10px
-      .dark
-        @extend .golden
-        background: #000000
+      .brown
+        @extend .black
+        @include background-image(linear-gradient(to bottom, #95594b 0%, #453123 100%))
+      .yellow
+        @extend .black
+        @include background-image(linear-gradient(to bottom, #e5c745 0%, #db9531 100%))
+
+
 
   &__watch
     margin-top: -10px
     position: relative
-    float: left
     width: 260px
     margin-left: 70px
 
@@ -298,96 +313,34 @@ header
       font-family: 'conv_pfdintextcondpro-thin'
 
 .photos
-  padding: 35px 0 60px 0
+  padding: 35px 0 45px 0
   +box
   +clr
+  background: #f5ebd1
   .photos_in
     @extend %in
   .photo__item
     position: relative
     display: inline-block
-    width: 320px
-    height: 180px
+    width: 300px
+    height: 300px
     vertical-align: top
-    margin-right: 15px
+    margin-right: 45px
+    margin-top: 35px
     &:last-child
       margin-right: 0
-    i
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background: rgba(#fff, .7)
-      +opacity(1)
-      +transition(background, .5s)
-    &:hover
-      i
-        +opacity(0)
-    span
-      position: absolute
-      top: 0
-      left: 0
-      right: 0
-      bottom: 0
-      background: rgba(#000, .6)
-      +opacity(0)
-      z-index: 1
-      +transition(background, .5s)
-      &:after
-        position: absolute
-        content: ""
-        +s(zoom)
-        top: 50%
-        left: 50%
-        +transform(translate(-50%, -50%))
-      &:before
-        position: absolute
-        top: 6px
-        left: 6px
-        width: 300px
-        height: 160px
-        background: none
-        border: solid rgba(#ebd7a5, .4) 4px
-        content: ""
-      &:hover
-        +opacity(1)
+
     img
       display: block
+      +border-radius(50%)
 
-.slick-prev, .slick-next
-  position: absolute
-  content: ''
-  top: 14px
-  left: 0
-  width: 330px
-  height: 200px
-  +transition(background, .5s)
-  &:hover
-    +background-image(linear-gradient(to right, rgba(#fff, 1), rgba(#fff, 0)))
-  &:before
-    position: absolute
-    content: ""
-    top: 38%
-    left: 0
-    +s(prev)
 
-.slick-next
-  right: 0
-  left: auto
-  &:hover
-    +background-image(linear-gradient(to right, rgba(#fff, 0), rgba(#fff, 1)))
-  &:before
-    position: absolute
-    content: ""
-    top: 38%
-    right: 5px
-    left: auto
-    +s(next)
+
 
 .reviews
   +clr
   padding-bottom: 60px
+  padding-top: 45px
   h2
     margin-bottom: 35px
     text-align: center
