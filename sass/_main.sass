@@ -93,7 +93,6 @@ header
     line-height: 1.2em
     color: #ffffff
 
-
   .header_in
     @extend %in
     +clr
@@ -146,7 +145,6 @@ header
       width: 405px
       z-index: 1
       +clr
-
 
 .scrollMenu
   //@extend header
@@ -212,7 +210,6 @@ header
     margin-top: 15px
     margin-bottom: 15px
 
-
   &__price
     margin-top: 18px
     form
@@ -270,8 +267,6 @@ header
         @extend .black
         @include background-image(linear-gradient(to bottom, #e5c745 0%, #db9531 100%))
 
-
-
   &__watch
     margin-top: -10px
     position: relative
@@ -283,34 +278,7 @@ header
       height: 535px
       position: relative
       display: block
-    .prev
-      position: absolute
-      content: ""
-      +s(prev)
-      top: 40%
-      left: -70px
-      cursor: pointer
 
-    .next
-      position: absolute
-      content: ""
-      +s(next)
-      top: 40%
-      right: -70px
-      cursor: pointer
-
-    .threesixty
-      position: absolute
-      text-align: center
-      padding-top: 35px
-      +box
-      top: 0px
-      right: -120px
-      +s(360)
-      font-size: 36px
-      color: #5a5a5a
-      content: ""
-      font-family: 'conv_pfdintextcondpro-thin'
 
 .photos
   padding: 35px 0 45px 0
@@ -334,9 +302,6 @@ header
       display: block
       +border-radius(50%)
 
-
-
-
 .reviews
   +clr
   padding-bottom: 80px
@@ -359,7 +324,7 @@ header
     +box
     +clr
     background: #f5ebd1
-    @include box-shadow(inset 0 -2px 0 rgba(0,0,0,.1))
+    @include box-shadow(inset 0 -2px 0 rgba(0, 0, 0, .1))
     &:last-child
       margin-right: 0
     &:after
@@ -382,7 +347,7 @@ header
       font-size: 16px
 
 .order
-  margin-top: 0
+  margin-top: 65px
   padding-bottom: 40px
   .order_in
     @extend %in
@@ -398,14 +363,14 @@ header
     padding-top: 20px
     display: inline-block
     margin-right: 18px
-    border: solid 4px rgb(230, 230, 230)
+    border: solid 4px rgb(225, 200, 170)
     background: #ffffff
     +box
     &:last-child
       margin-right: 0
   &__caption
     font-size: 30px
-    font-family: 'conv_pfdintextcondpro-thin'
+    font-family: 'conv_pfdintextcondpro-thinital'
     margin-bottom: 15px
     color: #1e1e1e
     text-transform: none
@@ -421,11 +386,11 @@ header
     line-height: 2em
     background: url(../img/specs-price_bg.png) no-repeat
     width: 330px
-    height: 90px
+    height: 100px
     margin-left: -14px
     padding-top: 34px
     h3
-      font-family: 'conv_pfdintextcondpro-thin'
+      font-family: 'conv_pfdintextcondpro-thinital'
       font-size: 36px
       font-weight: normal
       color: #ffffff
@@ -440,9 +405,9 @@ header
       float: right
       margin-right: 50px
       font-size: 24px
-      color: #5a5a5a
+      color: #af967d
   &__text
-    padding: 20px 15px 0
+    padding: 5px 15px 0
     font-size: 16px
     color: #787878
     text-align: left
@@ -457,7 +422,6 @@ header
     margin-top: -10px
     input
     button
-      font-size: 24px
 
 .our
   background: url(../img/our_bg.jpg) center no-repeat
@@ -483,7 +447,6 @@ header
     font-weight: normal
     line-height: 1em
     color: #5f6450
-
 
   .our_in
     @extend %in
@@ -554,9 +517,9 @@ header
       display: block
 
 .bottom
-  height: 790px
+  height: 745px
   @extend header
-  padding-top: 55px
+  padding-top: 35px
   .header_in--bottom
     margin-top: 0px !important
 
